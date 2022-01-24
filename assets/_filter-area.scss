@@ -1,0 +1,56 @@
+/*-------------------------
+#.filter-area
+--------------------------*/
+.filter-area {
+    background-color: var(--color-one);
+    padding: 2.5rem;
+    .offcanvas-title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--bColor);
+    }
+    .btn-close {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        font-size: 2rem;
+    }
+    .single-filter {
+        margin-top: 3.5rem;
+        .filter-title {
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+            font-family: 'Antipol Wide';
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--bColor);
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(43,42,40, .20);
+        }
+        .form-check {
+            margin-bottom: 1rem;
+            .form-check-label {
+                text-transform: capitalize;
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: var(--bColor);
+                cursor: pointer;
+            }
+            .form-check-input {
+                border-radius: 0;
+                box-shadow: none;
+                border: 2px solid var(--bColor);
+                background: transparent;
+                &:checked {
+                    background: var(--bColor);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .filter-area {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,71 @@
+/*-------------------------
+#.text-page-area
+--------------------------*/
+.text-page-area {
+    .feature-area {
+        margin: 7rem 0;
+        .title-three {
+            margin-bottom: 1.5rem;
+        }
+        .title-four {
+            margin-bottom: 1.5rem;
+        }
+        .title-five {
+            margin-bottom: 1.5rem;
+        }
+        .feature-content {
+            margin: 4.5rem 0;
+            p {
+                font-size: 1.6rem;
+                line-height: 2rem;
+                font-weight: 500;
+                color: var(--bColor);
+            }
+        }
+        .feature-list {
+            .feature-title {
+                margin-bottom: 1.5rem;
+                font-family: $bodyFont;
+                font-size: 1.6rem;
+                text-transform: capitalize;
+                font-weight: bold;
+                color: var(--bColor);
+            }
+        }
+    }
+}
+@media (max-width: 11399px) {
+    .text-page-area .title-two {
+        font-size: 3.8rem;
+    }
+}
+@media (max-width: 1199px) {
+    .text-page-area .title-three {
+        font-size: 3.2rem;
+    }
+    .text-page-area .title-four {
+        font-size: 2.6rem;
+    }
+    .text-page-area .title-five {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 991px) {
+    .text-page-area .feature-area .feature-list {
+        margin: 1.5rem 0;
+    }
+    .text-page-area .title-two {
+        font-size: 3.6rem;
+    }
+    .text-page-area .feature-area {
+        margin: 4rem 0;
+    }
+}
+@media (max-width: 767px) {
+    .text-page-area .text-page-left {
+        margin-bottom: 3rem;
+    }
+    .text-page-area .primary-form .form-btn {
+        margin-top: 2rem;
+    }
+}

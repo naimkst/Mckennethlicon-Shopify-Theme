@@ -1,0 +1,44 @@
+/*-------------------------
+#.story-area
+--------------------------*/
+.story-area {
+    padding: 20rem 0;
+    background: url('../images/story-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .story-title {
+        margin-bottom: 1.5rem;
+        font-size: 5rem;
+        line-height: 6.3rem;
+        color: #FEF6EF;
+    }
+    .story-content {
+        margin-bottom: 5rem;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        font-weight: 500;
+        color: #FEF6EF;
+    }
+}
+@media (max-width: 1199px) {
+    .story-area {
+        padding: 12rem 0;
+    }
+}
+@media (max-width: 767px) {
+    .story-area {
+        padding: 8rem 0;
+    }
+}
+@media (max-width: 480px) {
+    .story-area .story-title {
+        font-size: 4rem;
+        line-height: 5.3rem;
+    }
+    .story-area .story-content {
+        margin-bottom: 4rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+}

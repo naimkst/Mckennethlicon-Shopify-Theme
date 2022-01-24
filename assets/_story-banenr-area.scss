@@ -1,0 +1,60 @@
+/*-------------------------
+#.story-banenr-area
+--------------------------*/
+.story-banenr-area {
+    position: relative;
+    padding: 250px 0 350px 0;
+    background: url('../images/story-banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background: rgba(255, 255, 255, .3);
+    }
+    .baner-title {
+        margin-bottom: 2rem;
+        font-size: 8rem;
+        line-height: 9rem;
+        font-weight: bold;
+        color: var(--bColor);
+    }
+    .banner-content {
+        font-family: 'Greycliff CF Demi';
+        font-size: 2.5rem;
+        line-height: 3.3rem;
+        font-weight: bold;
+        color: var(--bColor);
+    }
+}
+@media (max-width: 1399px) {
+    .story-banenr-area .baner-title {
+        font-size: 7rem;
+        line-height: 8rem;
+    }
+}
+@media (max-width: 1199px) {
+    .story-banenr-area .baner-title {
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+    .story-banenr-area {
+        padding: 200px 0 100px 0;
+    }
+}
+@media (max-width: 480px) {
+    .story-banenr-area .baner-title {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .story-banenr-area .banner-content {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,24 @@
+/*-------------------------
+#.featured-items-area
+--------------------------*/
+.featured-items-area {
+    padding: 7rem 0;
+    .featured-title {
+        margin-bottom: 2.5rem;
+        font-family: 'Antipol Wide';
+        font-weight: bold;
+        color: #DDD7D3;
+        text-transform: uppercase;
+        .text-dark {
+            color: var(--bColor);
+        }
+    }
+    .see-more-btn {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 767px) {
+    .featured-items-area {
+        padding: 5rem 0;
+    }
+}

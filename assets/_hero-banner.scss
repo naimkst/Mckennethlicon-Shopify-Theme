@@ -1,0 +1,79 @@
+/*-------------------------
+#.hero-banner
+--------------------------*/
+.hero-banner {
+    position: relative;
+    padding: 350px 0;
+    background: url('../images/banner-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background: rgba(255, 255, 255, .3);
+    }
+    .baner-title {
+        margin-bottom: 2rem;
+        font-size: 8rem;
+        line-height: 9rem;
+        font-weight: bold;
+        color: var(--bColor);
+    }
+    .banner-content {
+        margin-bottom: 3.5rem;
+        font-family: 'Greycliff CF Demi';
+        font-size: 2.5rem;
+        line-height: 3.3rem;
+        font-weight: bold;
+        color: var(--bColor);
+        a {
+            display: inline-block;
+            color: var(--primary-color);
+            transition: $transition;
+            &:hover {
+                color: var(--hover-color);
+            }
+        }
+    }
+}
+@media (max-width: 1399px) {
+    .hero-banner .baner-title {
+        font-size: 7rem;
+        line-height: 8rem;
+    }
+}
+@media (max-width: 1199px) {
+    .hero-banner .baner-title {
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+    .hero-banner {
+        padding: 250px 0;
+    }
+}
+@media (max-width: 991px) {
+    .hero-banner {
+        padding: 200px 0 100px 0;
+    }
+}
+@media (max-width: 480px) {
+    .hero-banner .baner-title {
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    .hero-banner .banner-content {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 360px) {
+    .hero-banner .baner-title {
+        font-size: 3.8rem;
+    }
+}

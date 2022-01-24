@@ -1,0 +1,54 @@
+/*-------------------------
+#.product-service
+--------------------------*/
+.product-service {
+    background: var(--bColor);
+    .product-service-info {
+        padding: 11rem 2.5rem;
+        max-width: 500px;
+        margin: 0 auto;
+        .product-service-title {
+            margin-bottom: 2.5rem;
+            font-size: 4.8rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            color: var(--color-one);
+        }
+        .product-service-content {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: #DDD7D3;
+        }
+    }
+    .service-image {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .product-service .product-service-info {
+        padding: 5rem 2.5rem;
+    }
+    .product-service .product-service-info .product-service-title {
+        font-size: 3.8rem;
+    }
+}
+@media (max-width: 991px) {
+    .product-service .product-service-info {
+        padding: 3rem 2.5rem;
+    }
+}
+@media (max-width: 767px) {
+    .product-service .product-service-info {
+        padding: 5rem 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .product-service .product-service-info .product-service-title {
+        font-size: 3.2rem;
+    }
+}

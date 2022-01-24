@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="23" viewBox="0 0 20 23">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_680" data-name="Rectangle 680" width="19" height="11" transform="translate(0 -0.045)" fill="#2b2a28" stroke="#2b2a28" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="bag" transform="translate(0 0.045)">
+    <g id="Rectangle_679" data-name="Rectangle 679" transform="translate(0 5.955)" fill="none" stroke="#2b2a28" stroke-width="2">
+      <path d="M0,0H20a0,0,0,0,1,0,0V15a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1,1H19a0,0,0,0,1,0,0V15a1,1,0,0,1-1,1H2a1,1,0,0,1-1-1V1A0,0,0,0,1,1,1Z" fill="none"/>
+    </g>
+    <g id="Mask_Group_40" data-name="Mask Group 40" transform="translate(1)" clip-path="url(#clip-path)">
+      <g id="Path_225" data-name="Path 225" transform="translate(4 2)" fill="none">
+        <path d="M3.333,0H6.667A3.488,3.488,0,0,1,10,3.625V14.5c0,2-10,2-10,0V3.625A3.488,3.488,0,0,1,3.333,0Z" stroke="none"/>
+        <path d="M 3.333330154418945 2 C 2.598130226135254 2 2 2.72881031036377 2 3.624650001525879 L 2 13.6707706451416 C 2.556968212127686 13.82652282714844 3.578333377838135 14 5 14 C 6.421666622161865 14 7.443032264709473 13.82652282714844 8 13.6707706451416 L 8 3.624650001525879 C 8 2.72881031036377 7.401869773864746 2 6.666669845581055 2 L 3.333330154418945 2 M 3.333330154418945 0 L 6.666669845581055 0 C 8.507610321044922 0 10 1.622809410095215 10 3.624650001525879 L 10 14.49862003326416 C 10 16.50045967102051 0 16.50045967102051 0 14.49862003326416 L 0 3.624650001525879 C 0 1.622809410095215 1.492380142211914 0 3.333330154418945 0 Z" stroke="none" fill="#2b2a28"/>
+      </g>
+    </g>
+  </g>
+</svg>

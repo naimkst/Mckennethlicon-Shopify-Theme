@@ -1,0 +1,45 @@
+/*-------------------------
+#.primary-accordion
+--------------------------*/
+.primary-accordion {
+    .accordion-item {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+    .accordion-header {
+        .accordion-button  {
+            background: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 1.5rem 0;
+            font-family: $bodyFont;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            color: var(--bColor);
+            border-bottom: 1px solid var(--bColor);
+            &:after {
+                background: transparent;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: "\f067";
+            }
+            &:not(.collapsed) {
+                &:after {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+    .accordion-body {
+        padding: 1.5rem 0;
+        p {
+            margin: 0;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            font-weight: 500;
+            color: var(--bColor);
+        }
+    }
+}

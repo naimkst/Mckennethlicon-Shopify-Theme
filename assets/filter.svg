@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.5" height="17" viewBox="0 0 15.5 17">
+  <g id="filter" transform="translate(-118.25 -476)">
+    <g id="Group_354" data-name="Group 354" transform="translate(0.5 17)">
+      <line id="Line_98" data-name="Line 98" y2="14" transform="translate(132.5 473.5) rotate(90)" fill="none" stroke="#2b2a28" stroke-linecap="square" stroke-width="1.5"/>
+      <g id="Ellipse_29" data-name="Ellipse 29" transform="translate(124 471)" fill="#ddd7d3" stroke="#2b2a28" stroke-linecap="square" stroke-width="1.5">
+        <circle cx="2.5" cy="2.5" r="2.5" stroke="none"/>
+        <circle cx="2.5" cy="2.5" r="1.75" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_355" data-name="Group 355" transform="translate(0.5 11)">
+      <path id="Path_308" data-name="Path 308" d="M0,0V14" transform="translate(132.5 473.5) rotate(90)" fill="none" stroke="#2b2a28" stroke-linecap="square" stroke-width="1.5"/>
+      <g id="Ellipse_29-2" data-name="Ellipse 29" transform="translate(119 471)" fill="#ddd7d3" stroke="#2b2a28" stroke-width="1.5">
+        <circle cx="2.5" cy="2.5" r="2.5" stroke="none"/>
+        <circle cx="2.5" cy="2.5" r="1.75" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_356" data-name="Group 356" transform="translate(0.5 5)">
+      <line id="Line_98-2" data-name="Line 98" y2="14" transform="translate(132.5 473.5) rotate(90)" fill="none" stroke="#2b2a28" stroke-linecap="square" stroke-width="1.5"/>
+      <g id="Ellipse_29-3" data-name="Ellipse 29" transform="translate(126 471)" fill="#ddd7d3" stroke="#2b2a28" stroke-linecap="square" stroke-width="1.5">
+        <circle cx="2.5" cy="2.5" r="2.5" stroke="none"/>
+        <circle cx="2.5" cy="2.5" r="1.75" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

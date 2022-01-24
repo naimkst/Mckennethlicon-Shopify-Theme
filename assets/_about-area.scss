@@ -1,0 +1,45 @@
+/*-------------------------
+#.about-area
+--------------------------*/
+.about-area {
+    padding: 17rem 0;
+    background-image: url('../images/about-area-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .about-image {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: .8rem;
+        }
+    }
+    .about-info {
+        .about-title {
+            margin-bottom: 2.5rem;
+            text-transform: capitalize;
+            font-size: 4.8rem;
+            font-weight: bold;
+            color: var(--bColor);
+        }
+        .about-content {
+            margin-bottom: 0;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 2rem;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .about-area {
+        padding: 8rem 0;
+    }
+    .about-area .about-info .about-title {
+        font-size: 3.8rem;
+    }
+}
+@media (max-width: 767px) {
+    .about-area .about-image {
+        margin-bottom: 3rem;
+    }
+}

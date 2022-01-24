@@ -1,0 +1,121 @@
+/* Greycliff CF font family  */
+@font-face {
+    font-family: 'Greycliff CF';
+    src: url('./GreycliffCF-Regular.eot');
+    src: url('./GreycliffCF-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./GreycliffCF-Regular.woff2') format('woff2'),
+        url('./GreycliffCF-Regular.woff') format('woff'),
+        url('./GreycliffCF-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Greycliff CF';
+    src: url('./GreycliffCF-Medium.eot');
+    src: url('./GreycliffCF-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./GreycliffCF-Medium.woff2') format('woff2'),
+        url('./GreycliffCF-Medium.woff') format('woff'),
+        url('./GreycliffCF-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Greycliff CF';
+    src: url('./GreycliffCF-Bold.eot');
+    src: url('./GreycliffCF-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./GreycliffCF-Bold.woff2') format('woff2'),
+        url('./GreycliffCF-Bold.woff') format('woff'),
+        url('./GreycliffCF-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Greycliff CF Demi';
+    src: url('./GreycliffCF-DemiBold.eot');
+    src: url('./GreycliffCF-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('./GreycliffCF-DemiBold.woff2') format('woff2'),
+        url('./GreycliffCF-DemiBold.woff') format('woff'),
+        url('./GreycliffCF-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Greycliff CF';
+    src: url('./GreycliffCF-Heavy.eot');
+    src: url('./GreycliffCF-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('./GreycliffCF-Heavy.woff2') format('woff2'),
+        url('./GreycliffCF-Heavy.woff') format('woff'),
+        url('./GreycliffCF-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+/* Antipol font family  */
+@font-face {
+    font-family: 'Antipol';
+    src: url('./Antipol-Bold.eot');
+    src: url('./Antipol-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./Antipol-Bold.woff2') format('woff2'),
+        url('./Antipol-Bold.woff') format('woff'),
+        url('./Antipol-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Antipol Wide';
+    src: url('./Antipol-WideRegular.eot');
+    src: url('./Antipol-WideRegular.eot?#iefix') format('embedded-opentype'),
+        url('./Antipol-WideRegular.woff2') format('woff2'),
+        url('./Antipol-WideRegular.woff') format('woff'),
+        url('./Antipol-WideRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Antipol Wide';
+    src: url('./Antipol-WideMedium.eot');
+    src: url('./Antipol-WideMedium.eot?#iefix') format('embedded-opentype'),
+        url('./Antipol-WideMedium.woff2') format('woff2'),
+        url('./Antipol-WideMedium.woff') format('woff'),
+        url('./Antipol-WideMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Antipol Wide';
+    src: url('./Antipol-WideBold.eot');
+    src: url('./Antipol-WideBold.eot?#iefix') format('embedded-opentype'),
+        url('./Antipol-WideBold.woff2') format('woff2'),
+        url('./Antipol-WideBold.woff') format('woff'),
+        url('./Antipol-WideBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Antipol Extended';
+    src: url('./Antipol-ExtendedBold.eot');
+    src: url('./Antipol-ExtendedBold.eot?#iefix') format('embedded-opentype'),
+        url('./Antipol-ExtendedBold.woff2') format('woff2'),
+        url('./Antipol-ExtendedBold.woff') format('woff'),
+        url('./Antipol-ExtendedBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

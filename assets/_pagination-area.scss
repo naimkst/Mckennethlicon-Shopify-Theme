@@ -1,0 +1,59 @@
+/*-------------------------
+#.pagination-area
+--------------------------*/
+.pagination-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .pagination-items {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            margin: 0 .5rem;
+            a {
+                display: inline-block;
+                font-family: $bodyFont;
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: rgba(43,42,40, .5);
+                transition: $transition;
+                &:hover {
+                    color: var(--bColor);
+                }
+            }
+            &.active {
+                a {
+                    color: var(--bColor);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .pagintion-btn {
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--bColor);
+        transition: $transition;
+        &:hover {
+            color: var(--primary-color);
+        }
+        &.back-btn {
+            i {
+                margin-right: .5rem;;
+            }
+        }
+        &.next-btn {
+            i {
+                margin-left: .5rem;;
+            }
+        }
+    }
+}
+@media (max-width: 375px) {
+    .pagination-area .pagintion-btn {
+        font-size: 1.2rem;
+    }
+}

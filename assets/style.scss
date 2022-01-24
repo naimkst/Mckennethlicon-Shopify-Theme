@@ -1,0 +1,65 @@
+/*
+------------- Table of content ----------------
+
+Template Name: SteamTea Responsive HTML5 Template
+Template URI: http://SteamTea.com
+Description: SteamTea Responsive HTML5 Template
+Author: Gobinda Sarkar
+Author URI: http://SteamTea.com
+Version: 1.0
+
+---------------------- common content ----------
+1.body reset content
+#.header area
+#.footer-area
+#.hero-banner
+#.single-product
+#.featured-items-area
+#.story-area
+#.showcase-area
+#.pagination-area
+#.shop-area
+#.filter-area
+#.story-banenr-area
+#.about-area
+#.product-service
+#.recently-viewed
+#.single-product-section
+#.primary-accordion
+#.text-page-area
+#.primary-form
+
+*/
+
+
+
+// variable
+@import "variable/_variable.scss";
+
+// mixin
+@import "mixin/_mixin.scss";
+
+// body reset content
+@import "reset/_predefine.scss";
+
+// component content
+@import "section/header/header";
+@import "section/footer-area/footer-area";
+@import "section/hero-banner/hero-banner";
+@import "section/single-product/single-product";
+@import "section/featured-items-area/featured-items-area";
+@import "section/story-area/story-area";
+@import "section/showcase-area/showcase-area";
+@import "section/pagination-area/pagination-area";
+@import "section/shop-area/shop-area";
+@import "section/filter-area/filter-area";
+@import "section/story-banenr-area/story-banenr-area";
+@import "section/about-area/about-area";
+@import "section/product-service/product-service";
+@import "section/recently-viewed/recently-viewed";
+@import "section/single-product-section/single-product-section";
+@import "section/primary-accordion/primary-accordion";
+@import "section/text-page-area/text-page-area";
+@import "section/primary-form/primary-form";
+
+

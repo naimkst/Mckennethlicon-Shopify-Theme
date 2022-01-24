@@ -1,0 +1,56 @@
+/*-------------------------
+#.primary-form
+--------------------------*/
+.primary-form {
+    .form-title {
+        margin-bottom: 3.5rem;
+        font-size: 2.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--bColor);
+    }
+    .form-btn {
+        display: block;
+        min-width: 23rem;
+        margin-top: 2.5rem;
+    }
+    .form-group {
+        margin-bottom: 3rem;
+        .form-control {
+            padding: 1rem 1.5rem;
+            width: 100%;
+            height: 4.8rem;
+            border: 1px solid var(--bColor);
+            box-shadow: none;
+            background-color: transparent;
+            font-family: $bodyFont;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--bColor);
+            border-radius: 0;
+        }
+        .message-box {
+            height: 16rem;
+            resize: none;
+        }
+        .form-check {
+            margin-bottom: 1rem;
+            .form-check-label {
+                text-transform: capitalize;
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: var(--bColor);
+                cursor: pointer;
+            }
+            .form-check-input {
+                border-radius: 0;
+                box-shadow: none;
+                border: 2px solid var(--bColor);
+                background: transparent;
+                &:checked {
+                    background: var(--bColor);
+                }
+            }
+        }
+    }
+}
