@@ -1,0 +1,60 @@
+
+<!-- Our Story area start here  -->
+<div class="story-area">
+    {% if section.settings.story_background_image %}
+        <style>
+            .story-area {
+                padding: 20rem 0;
+                background: url({{ section.settings.story_background_image | img_url: ''}});
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        </style>
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <h2 class="story-title">{{ section.settings.story_title }}</h2>
+                <p class="story-content">{{ section.settings.story_slug }}</p>
+                <a href="{{ section.settings.story_button_url }}" class="primary-btn">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- Our Story area end here  -->
+  
+  {% schema %}
+{
+    "name": "Our Story",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "story_background_image",
+            "label": "Story Background Image"
+        },
+        {
+            "type": "text",
+            "id": "story_title",
+            "label": "Story Title",
+            "default": "Our Story"
+        },
+        {
+            "type": "text",
+            "id": "story_slug",
+            "label": "Story Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        },
+        {
+            "type": "url",
+            "id": "story_button_url",
+            "label": "Story Button Link"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Our Story"
+      }
+    ]
+}
+{% endschema %}

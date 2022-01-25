@@ -1,0 +1,62 @@
+
+<!-- hero banenr area start here  -->
+<div class="hero-banner">
+    {% if section.settings.hero_background_image %}
+        <style>
+            .hero-banner {
+                position: relative;
+                padding: 350px 0;
+                background: url({{ section.settings.hero_background_image | img_url: '' }});
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                z-index: 1;
+            }
+        </style>
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="baner-title">{{ section.settings.hero_title }}</h2>
+                {{ section.settings.hero_slug }}
+                <a href="{{ section.settings.hero_button_url }}" class="secondary-btn">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- hero banenr area end here  -->
+
+{% schema %}
+{
+    "name": "Hero Banner",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "hero_background_image",
+            "label": "Hero Background Image"
+        },
+        {
+            "type": "text",
+            "id": "hero_title",
+            "label": "Hero Title",
+            "default": "Lorem ipsum dolor sit amet."
+        },
+        {
+            "type": "richtext",
+            "id": "hero_slug",
+            "label": "Hero Slug",
+            "default": "<p>Learn more about the rodents that may be infesting your home, buildings, yard and fields and how to control them in the safest and most efficient way.</p>"
+        },
+        {
+            "type": "url",
+            "id": "hero_button_url",
+            "label": "Hero Button Link"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Hero Banner"
+      }
+    ]
+}
+{% endschema %}
