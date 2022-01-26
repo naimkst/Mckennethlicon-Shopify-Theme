@@ -1,0 +1,63 @@
+<!-- about area star here  -->
+<div class="about-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-image">
+                            {% if section.settings.about_left_image %}
+                            <img src="{{ section.settings.about_left_image | img_url: '' }}" alt="about-image" />
+                            {% else %}
+                            <img src="{{ 'about-image.jpg' | asset_url }}" alt="about-image" />
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 col-md-6">
+                        <div class="about-info">
+                            {% if  section.settings.about_title %}
+                            <h2 class="about-title">{{ section.settings.about_title }}</h2>
+                            {% endif %}
+                            
+                            {% if section.settings.about_slug %}
+                            <p class="about-content">{{ section.settings.about_slug }}</p>
+                            {% endif }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- about area end here  -->
+
+
+{% schema %}
+{
+    "name": "About Area",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "about_left_image",
+            "label": "About Left Image"
+        },
+        {
+            "type": "text",
+            "id": "about_title",
+            "label": "About Title",
+            "default": "Lorem Ipsum"
+        },
+        {
+            "type": "text",
+            "id": "about_slug",
+            "label": "About Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+        }
+    ],
+    "presets": [
+      {
+        "name": "About Area"
+      }
+    ]
+}
+{% endschema %}

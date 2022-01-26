@@ -1,29 +1,26 @@
 <!-- featured items area start here  -->
-<div class="featured-items-area section-bg">
+<div class="featured-items-area">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                {% if section.settings.feature_title %}
-                    <h2 class="featured-title">{{ section.settings.feature_title }}</h2>
-                {% endif %}
-            </div>
-        </div>
+        <h2 class="featured-title text-dark">{{ section.settings.feature_title }}</h2>
         <div class="row g-0">
-
-            {% assign limit = section.settings.feature_item_limit %}
+            {% assign limit = section.settings.about_feature_item_limit %}
             {% for product in section.settings.feature_item_collection.products limit:limit %}
-                <div class="col-lg-4 col-md-6">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="single-product">
                         <div class="product-thumbnil">
-                            <a href="{{ product.url }}" class=""><img src="{{ product.featured_image.src | img_url: '' }}" alt="item" /></a>
+                            <a href="{{ product.url }}"><img src="{{ product.featured_image.src | img_url: '' }}" alt="item" /></a>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+                            <h3 class="product-title"><a href="{{ product.url }}">Cream Earl Grey</a></h3>
                             <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
                         </div>
                     </div>
                 </div>
             {% endfor %}
+
+        </div>
+        <div class="see-more-area text-end">
+            <a href="{{ section.settings.feature_item_link }}" class="see-more-btn">SEE MORE <i class="fas fa-caret-right"></i></a>
         </div>
     </div>
 </div>
@@ -31,7 +28,7 @@
 
 {% schema %}
 {
-    "name": "Feature Item",
+    "name": "About Feature Item",
     "settings":[
         {
             "type": "text",
@@ -45,17 +42,22 @@
             "label": "Feature Collections"
         },
         {
+            "type": "url",
+            "id": "feature_item_link",
+            "label": "More Link"
+        },
+        {
             "type": "range",
-            "id": "feature_item_limit",
+            "id": "about_feature_item_limit",
             "label": "Product Limit",
             "min": 1,
             "max": 40,
-            "default": 3
+            "default": 4
         }
     ],
     "presets": [
       {
-        "name": "Feature Item"
+        "name": "About Feature Item"
       }
     ]
 }

@@ -1,0 +1,58 @@
+<!-- product serve area start here  -->
+<div class="product-service">
+    <div class="container-fluid g-0">
+        <div class="row g-0">
+            <div class="col-md-6 order-last order-lg-first">
+                <div class="product-service-info">
+                    {% if section.settings.product_service_title %}
+                    <h2 class="product-service-title">{{ section.settings.product_service_title }}</h2>
+                    {% endif %}
+
+                    {% if section.settings.product_service_slug %}
+                    <p class="product-service-content">{{ section.settings.product_service_slug }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-6 order-first order-lg-last">
+                <div class="service-image">
+                    {% if section.settings.product_service_left_image %}
+                    <img src="{{ section.settings.product_service_left_image | img_url: '' }}" alt="product-service-image" />
+                    {% else %}
+                    <img src="{{ 'product-service-image.jpg' | asset_url }}" alt="product-service-image" />
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- product serve area end here  -->
+
+{% schema %}
+{
+    "name": "About Product Service",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "product_service_left_image",
+            "label": "Product Service Right Image"
+        },
+        {
+            "type": "text",
+            "id": "product_service_title",
+            "label": "Product Service Title",
+            "default": "Lorem Ipsum"
+        },
+        {
+            "type": "text",
+            "id": "product_service_slug",
+            "label": "Product Service Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+        }
+    ],
+    "presets": [
+      {
+        "name": "About Product Service"
+      }
+    ]
+}
+{% endschema %}

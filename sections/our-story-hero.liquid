@@ -1,0 +1,60 @@
+<!-- story-banner-area start here  -->
+<div class="story-banenr-area">
+    {% if section.settings.story_background_image %}
+        <style>
+            .story-banenr-area {
+                position: relative;
+                padding: 250px 0 350px 0;
+                background: url({{ section.settings.story_background_image | img_url: '' }});
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                z-index: 1;
+            }
+        </style>
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                {% if section.settings.story_title %}
+                <h2 class="baner-title">{{ section.settings.story_title }}</h2>
+                {% endif %}
+
+                {% if section.settings.story_slug %}
+                <p class="banner-content">{{ section.settings.story_slug }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- story-banner-area end here  -->
+
+{% schema %}
+{
+    "name": "Our Story Hero",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "story_background_image",
+            "label": "Story Background Image"
+        },
+        {
+            "type": "text",
+            "id": "story_title",
+            "label": "Story Title",
+            "default": "Our Story"
+        },
+        {
+            "type": "text",
+            "id": "story_slug",
+            "label": "Story Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis euismod ex, id rhoncus arcu. Ut vitae facilisis metus, nec auctor nibh."
+        }
+    ],
+    "presets": [
+      {
+        "name": "Our Story Hero"
+      }
+    ]
+}
+{% endschema %}
