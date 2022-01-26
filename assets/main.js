@@ -79,6 +79,62 @@
     $('.search-btn a').on('click', function() {
       $('.search-form-area').toggleClass('show');
     });
+
+
+    //For Variant Product Single page
+
+      function getVariantFromOptions() {
+        let variantArr = []
+        // console.log('hit', variantArr);
+        $(".single-size insput").map(function (i, el) {
+          let variant = { value: $(el).val(), index: $(el).data('index') };
+          variantArr.push(variant);
+        });
+        return variantArr;
+      }
+
+      function updateHistoryState(variant) {
+
+        if (!history.replaceState || !variant) {
+          return;
+        }
+        var newurl = window.location.protocol +
+          '//' +
+          window.location.host +
+          window.location.pathname +
+          '?variant=' +
+          variant.id;
+
+        window.history.replaceState({ path: newurl }, '', newurl);
+      }
+
+      $('.single-size input').on('change', function () {
+
+        var form = document.querySelector('input[name="id"]:checked').value;
+
+        var selectedValues = getVariantFromOptions();
+        var variants = window.product.variants;
+        var currency = window.Shopify.currency.active;
+        // console.log(selectedValues)
+
+        variants.forEach(function(item) {
+          if(item.title == form){
+            updateHistoryState(item)
+            $('#variant-id').val(item.id);
+            const price = item.price.toString();
+            $('#price-single-page').html(currency+ " " + price.slice(0, -2) + ".00");
+          }
+      });
+
+        var found = _.find(variants, function (variant) {
+          return selectedValues.every(function (values) {
+            return _.isEqual(variant[values.index], values.value);
+          });
+        });
+        // console.log(found)
+        // updateHistoryState(found)
+        // $('#variant-id').val(found.id)
+      });
   });
 
 })(jQuery);

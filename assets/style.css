@@ -2253,7 +2253,7 @@ scrollUp
   padding-top: 13%;
   padding-bottom: 7%;
 }
-.text-page-area {
+.text-page-area, .single-product-section.section {
   padding-top: 180px;
 }
 @media (max-width: 991px) {
@@ -2335,4 +2335,10 @@ scrollUp
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;;
+}
+p.price-single-page {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 15px !important;
+  display: inline-block;
 }

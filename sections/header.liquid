@@ -67,7 +67,7 @@
                     </li>
                     <li><a href="#"><img class="icon" src="{{ 'account.svg' | asset_url }}" alt="account" /></a></li>
                     <li><a href="#" class="cart-btn"><img class="icon" src="{{ 'bag.svg' | asset_url }}" alt="bag" />
-                            <span class="cart-items-count">0</span></a></li>
+                            <span class="cart-items-count">{{ cart.item_count }}</span></a></li>
                 </ul>
                 <button class="menu-bar d-block d-lg-none" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasMobileMenu" aria-controls="offcanvasMobileMenu"><i
