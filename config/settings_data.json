@@ -11,11 +11,23 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "7944e981-89b2-4743-8ed3-e7c4e148f2c8": {
+            "type": "slide",
+            "settings": {
+              "day_name": "MON-FRI",
+              "day_time": "12PM - 6PM"
+            }
+          }
+        },
+        "block_order": [
+          "7944e981-89b2-4743-8ed3-e7c4e148f2c8"
+        ],
         "settings": {
           "address": "#101-2342 Hasting St E Vancouver BC V5L 1V5",
           "phone": "+1 778 889 8327",
           "email": "hello@steamteahouse.com",
-          "footer_menu": "",
+          "footer_menu": "main-menu",
           "facebook": "https:\/\/facebook.com",
           "instagram": "https:\/\/instagram.com",
           "Privacy_Policy": "",
