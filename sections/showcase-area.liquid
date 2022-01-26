@@ -1,0 +1,43 @@
+<!-- showcase area start here  -->
+<div class="showcase-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {% if section.settings.showcase_hero_title %}
+                <h3 class="showcase-title">{{ section.settings.showcase_hero_title }}</h3>
+                {% endif %}
+
+                {% if section.settings.showcase_hero_slug %}
+                <p class="showcase-content">{{ section.settings.showcase_hero_slug }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- showcase area end here  -->
+
+{% schema %}
+{
+    "name": "Shop Header Showcase",
+    "settings":[
+        
+        {
+            "type": "text",
+            "id": "showcase_hero_title",
+            "label": "Showcase Hero Title",
+            "default": "Our Teas"
+        },
+        {
+            "type": "text",
+            "id": "showcase_hero_slug",
+            "label": "Showcase Hero Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis euismod ex, id rhoncus arcu. Ut vitae facilisis metus, nec auctor nibh. Integer ut tristique magna, id congue ex. Sed mollis libero non velit faucibus, quis suscipit tortor gravida."
+        }
+    ],
+    "presets": [
+      {
+        "name": "Shop Header Showcase"
+      }
+    ]
+}
+{% endschema %}

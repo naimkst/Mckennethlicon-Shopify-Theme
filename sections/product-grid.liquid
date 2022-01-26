@@ -1,0 +1,141 @@
+<!-- shop area start here  -->
+<div class="shop-area">
+    <div class="container">
+        <div class="shop-filter-are">
+            <div class="shop-filter-left">
+                <button class="filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
+                    aria-controls="offcanvasFilter">Filter by <img class="filter-icon" src="{{ 'filter.svg' | asset_url }}"
+                        alt="filter" /></button>
+            </div>
+            <div class="shop-filter-right">
+                <div class="short-by">
+                    <span class="short-by-title">Sort by</span>
+                    <select class="form-select">
+                        <option selected>Best Selling</option>
+                        <option value="1">Best Price</option>
+                        <option value="2">Low Price</option>
+                        <option value="3">Best Review</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="shop-item-wrap">
+            <div class="row g-0">
+                {% for product in collections.all.products %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-product">
+                            <div class="product-thumbnil">
+                                <a href="{{ product.url }}"><img src="{{ product.featured_image.src | img_url: '' }}" alt="item" /></a>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+                                <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="pagination-area">
+            <a href="#" class="pagintion-btn back-btn"><i class="fas fa-caret-left"></i> BACK</a>
+            <ul class="pagination-items">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+            <a href="#" class="pagintion-btn next-btn">NEXT <i class="fas fa-caret-right"></i></a>
+        </div>
+    </div>
+</div>
+<div class="offcanvas offcanvas-start filter-area" tabindex="-1" id="offcanvasFilter">
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvasExampleLabel">Filter by</h4>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                class="fas fa-times"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="single-filter">
+            <h4 class="filter-title">Collection</h4>
+            <div class="filter-list">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Caffeinated" />
+                    <label class="form-check-label" for="Caffeinated"> Caffeinated</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Non-caffeinated" />
+                    <label class="form-check-label" for="Non-caffeinated"> Non-caffeinated</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Organic" checked />
+                    <label class="form-check-label" for="Organic"> Organic</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Non-organic" />
+                    <label class="form-check-label" for="Non-organic"> Non-organic</label>
+                </div>
+            </div>
+        </div>
+        <div class="single-filter">
+            <h4 class="filter-title">Tea Type</h4>
+            <div class="filter-list">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Black" />
+                    <label class="form-check-label" for="Black"> Black</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Dark" />
+                    <label class="form-check-label" for="Dark"> Dark</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Fruit-Herbal" checked />
+                    <label class="form-check-label" for="Fruit-Herbal"> Fruit/Herbal</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Honeybush" />
+                    <label class="form-check-label" for="Honeybush"> Rooibos/Honeybush</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Oolong" />
+                    <label class="form-check-label" for="Oolong"> Oolong</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="White" />
+                    <label class="form-check-label" for="White"> White</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Green" />
+                    <label class="form-check-label" for="Green"> Green</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- shop area end here  -->
+
+{% schema %}
+{
+    "name": "Products Grid",
+    "settings":[
+        
+        {
+            "type": "text",
+            "id": "showcase_hero_title",
+            "label": "Showcase Hero Title",
+            "default": "Our Teas"
+        },
+        {
+            "type": "text",
+            "id": "showcase_hero_slug",
+            "label": "Showcase Hero Description",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis euismod ex, id rhoncus arcu. Ut vitae facilisis metus, nec auctor nibh. Integer ut tristique magna, id congue ex. Sed mollis libero non velit faucibus, quis suscipit tortor gravida."
+        }
+    ],
+    "presets": [
+      {
+        "name": "Products Grid"
+      }
+    ]
+}
+{% endschema %}

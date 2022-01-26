@@ -1,0 +1,15 @@
+{
+    "sections": {
+      "main": {
+        "type": "showcase-area"
+      },
+      "shop": {
+        "type": "product-grid"
+      }
+    },
+    "order": [
+      "main",
+      "shop"
+    ]
+  }
+  
