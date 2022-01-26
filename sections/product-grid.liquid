@@ -4,8 +4,8 @@
         <div class="shop-filter-are">
             <div class="shop-filter-left">
                 <button class="filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
-                    aria-controls="offcanvasFilter">Filter by <img class="filter-icon" src="{{ 'filter.svg' | asset_url }}"
-                        alt="filter" /></button>
+                    aria-controls="offcanvasFilter">Filter by <img class="filter-icon"
+                        src="{{ 'filter.svg' | asset_url }}" alt="filter" /></button>
             </div>
             <div class="shop-filter-right">
                 <div class="short-by">
@@ -22,17 +22,18 @@
         <div class="shop-item-wrap">
             <div class="row g-0">
                 {% for product in collections.all.products %}
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-product">
-                            <div class="product-thumbnil">
-                                <a href="{{ product.url }}"><img src="{{ product.featured_image.src | img_url: '' }}" alt="item" /></a>
-                            </div>
-                            <div class="product-info">
-                                <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
-                                <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-product">
+                        <div class="product-thumbnil">
+                            <a href="{{ product.url }}"><img src="{{ product.featured_image.src | img_url: '' }}"
+                                    alt="item" /></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+                            <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
                         </div>
                     </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
