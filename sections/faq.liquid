@@ -9,93 +9,29 @@
             </div>
             <div class="col-lg-7 col-md-7 col-xl-6">
                 <div class="accordion primary-accordion" id="PrimaryAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                General
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#PrimaryAccordion">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut </p>
+                    {% for block in section.blocks %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne{{ forloop.index }}">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne{{ forloop.index }}" aria-expanded="true" aria-controls="collapseOne{{ forloop.index }}">
+                                    {{ block.settings.faq_title }}
+                                </button>
+                            </h2>
+                            <div id="collapseOne{{ forloop.index }}" class="accordion-collapse collapse {% if forloop.index == 1 %} show {% endif %}" aria-labelledby="headingOne{{ forloop.index }}"
+                                data-bs-parent="#PrimaryAccordion">
+                                <div class="accordion-body">
+                                    {{ block.settings.faq_answer }}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Shipping
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                            data-bs-parent="#PrimaryAccordion">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Duis aute irure dolor
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                            data-bs-parent="#PrimaryAccordion">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Reprehenderit
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                            data-bs-parent="#PrimaryAccordion">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                    laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut </p>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="feature-area">
                     <h3 class="title-three">{{ section.settings.content_title }}</h3>
                     <div class="feature-content">
                         {{ section.settings.faq_description }}
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-sm-6 col-lg-6 col-md-12">
                             <div class="feature-list">
                                 <h3 class="feature-title">Unordered List</h3>
@@ -124,7 +60,7 @@
                                 </ol>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -156,9 +92,34 @@
             "default": "<p>Quis fringilla tortor vulputate mattis. Curabitur vitae eleifend arcu, vel porta eros. Praesent interdum mauris ac vulputate ullamcorper. Phasellus eleifend at libero eu maximus. Maecenas volutpat enim in rutrum egestas. Aliquam bibendum orci nisi, quis aliquet magna sollicitudin ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi fringilla sodales sodales. Cras in tristique velit. Morbi aliquam ligula eu massa dignissim, quis molestie orci semper. Donec vel ullamcorper leo. Nunc pretium hendrerit varius. Nulla vel cursus quam. Sed nibh nibh, facilisis et interdum ut, pulvinar ut odio. Vivamus efficitur nunc convallis ipsum vehicula, quis tristique quam ultricies. In ac eros non neque sollicitudin efficitur.</p>"
         }
     ],
+    "blocks": [
+    {
+      "type": "heading",
+      "name": "FAQ",
+      "settings": [
+        {
+            "type": "text",
+            "id": "faq_title",
+            "label": "FAQ Question",
+            "default": "General"
+        },
+        {
+            "type": "richtext",
+            "id": "faq_answer",
+            "label": "FAQ Details",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>"
+        }
+      ]
+    }
+  ],
     "presets": [
       {
-        "name": "FAQ Page"
+        "name": "FAQ Page",
+        "blocks": [
+        {
+          "type": "heading"
+        }
+      ]
       }
     ]
 }
