@@ -2253,3 +2253,11 @@ scrollUp
   padding-top: 13%;
   padding-bottom: 7%;
 }
+.text-page-area {
+  padding-top: 180px;
+}
+@media (max-width: 991px) {
+  .text-page-area {
+    padding-top: 160px;
+  }
+}
