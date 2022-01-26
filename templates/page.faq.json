@@ -1,11 +1,15 @@
 {
-    "sections": {
-      "main": {
-        "type": "faq"
+  "sections": {
+    "main": {
+      "type": "faq",
+      "settings": {
+        "faq_title": "Heading Title 2",
+        "content_title": "Header Title 3",
+        "faq_description": "<p>Quis fringilla tortor vulputate mattis. Curabitur vitae eleifend arcu, vel porta eros. Praesent interdum mauris ac vulputate ullamcorper. Phasellus eleifend at libero eu maximus. Maecenas volutpat enim in rutrum egestas. Aliquam bibendum orci nisi, quis aliquet magna sollicitudin ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi fringilla sodales sodales. Cras in tristique velit. Morbi aliquam ligula eu massa dignissim, quis molestie orci semper. Donec vel ullamcorper leo. Nunc pretium hendrerit varius. Nulla vel cursus quam. Sed nibh nibh, facilisis et interdum ut, pulvinar ut odio. Vivamus efficitur nunc convallis ipsum vehicula, quis tristique quam ultricies. In ac eros non neque sollicitudin efficitur.<\/p><p><\/p><p>Quis fringilla tortor vulputate mattis. Curabitur vitae eleifend arcu, vel porta eros. Praesent interdum mauris ac vulputate ullamcorper. Phasellus eleifend at libero eu maximus. Maecenas volutpat enim in rutrum egestas. Aliquam bibendum orci nisi, quis aliquet magna sollicitudin ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi fringilla sodales sodales. Cras in tristique velit. Morbi aliquam ligula eu massa dignissim, quis molestie orci semper. Donec vel ullamcorper leo. Nunc pretium hendrerit varius. Nulla vel cursus quam. Sed nibh nibh, facilisis et interdum ut, pulvinar ut odio. Vivamus efficitur nunc convallis ipsum vehicula, quis tristique quam ultricies. In ac eros non neque sollicitudin efficitur.<\/p>"
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
