@@ -75,7 +75,10 @@
       focusOnSelect: true,
       vertical: true,
     });
-    
+    // search area show hide 
+    $('.search-btn a').on('click', function() {
+      $('.search-form-area').toggleClass('show');
+    });
   });
 
 })(jQuery);

@@ -2261,3 +2261,78 @@ scrollUp
     padding-top: 160px;
   }
 }
+.search-btn {
+  position: static
+}
+.search-form-area {
+  position: absolute;
+  left: auto;
+  right: 15%;
+  top: 80%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+  transform: translateY(15px);
+}
+.search-form-area.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.search-form-area .search-form input {
+  width: 350px;
+  height: 50px;
+  padding: 10px 15px;
+  font-family: $bodyFont;
+  font-size: 16px;
+  font-weight: 400;
+  color:var(--primary-color);
+  border-radius:0;
+  border: none;
+}
+.search-form-area .search-item-list {
+  width: 350px;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #ECE7E3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+  border-radius: 3px;
+}
+.header-area .header-wrap .header-right .search-form-area .single-search-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #fafafa;
+}
+.header-area .search-form-area .single-search-item .item-thumbnail {
+  margin-right: 10px;
+}
+.header-area .search-form-area .single-search-item .item-thumbnail img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.header-area .search-form-area .single-search-item .item-info {
+  flex: 1;
+}
+.header-area .search-form-area .single-search-item .item-info h3 {
+  font-size: 14px;
+  font-family: 'Greycliff CF Demi';
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--bColor);
+  margin: 0;
+}
+.header-area .header-wrap .header-right .load-more-btn {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  background: #2B2928;
+  color: var(--white);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;;
+}

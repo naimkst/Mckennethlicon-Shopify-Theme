@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "single-product",
       "blocks": {
         "vendor": {
           "type": "text",
@@ -50,13 +50,9 @@
         "description",
         "share"
       ]
-    },
-    "product-recommendations": {
-      "type": "product-recommendations"
     }
   },
   "order": [
-    "main",
-    "product-recommendations"
+    "main"
   ]
 }
