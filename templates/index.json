@@ -12,10 +12,28 @@
         "hero_slug": "<p>Learn more about the rodents that may be infesting your home, buildings, yard and fields and how to control them in the safest and most efficient way.<\/p>",
         "hero_button_url": ""
       }
+    },
+    "1643190871870433cb": {
+      "type": "feature-item",
+      "settings": {
+        "feature_title": "FEATURED ITEMS",
+        "feature_item_collection": "feature-item",
+        "feature_item_limit": 3
+      }
+    },
+    "16431908832b488379": {
+      "type": "our-story",
+      "settings": {
+        "story_title": "Our Story",
+        "story_slug": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "story_button_url": ""
+      }
     }
   },
   "order": [
     "home",
-    "164319084972760a3c"
+    "164319084972760a3c",
+    "1643190871870433cb",
+    "16431908832b488379"
   ]
 }
