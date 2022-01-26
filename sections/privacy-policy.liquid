@@ -1,0 +1,54 @@
+<!-- text-page-area start here  -->
+<div class="text-page-area section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-xl-4">
+                <div class="text-page-left">
+                    <h2 class="title-two">{{ section.settings.faq_title }}</h2>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-xl-6">
+                <div class="feature-area">
+                    <h3 class="title-three">{{ section.settings.content_title }}</h3>
+                    <div class="feature-content">
+                        {{ section.settings.faq_description }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- text-page-area end here  -->
+
+{% schema %}
+{
+    "name": "Privacy Policy Page",
+    "settings":[
+        
+        {
+            "type": "text",
+            "id": "faq_title",
+            "label": "Faq Title",
+            "default": "Heading Title 2"
+        },
+        {
+            "type": "text",
+            "id": "content_title",
+            "label": "Content Title",
+            "default": "Header Title 3"
+        },
+        {
+            "type": "richtext",
+            "id": "faq_description",
+            "label": "Faq Content Description",
+            "default": "<p>Quis fringilla tortor vulputate mattis. Curabitur vitae eleifend arcu, vel porta eros. Praesent interdum mauris ac vulputate ullamcorper. Phasellus eleifend at libero eu maximus. Maecenas volutpat enim in rutrum egestas. Aliquam bibendum orci nisi, quis aliquet magna sollicitudin ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi fringilla sodales sodales. Cras in tristique velit. Morbi aliquam ligula eu massa dignissim, quis molestie orci semper. Donec vel ullamcorper leo. Nunc pretium hendrerit varius. Nulla vel cursus quam. Sed nibh nibh, facilisis et interdum ut, pulvinar ut odio. Vivamus efficitur nunc convallis ipsum vehicula, quis tristique quam ultricies. In ac eros non neque sollicitudin efficitur.</p>"
+        }
+    ],
+ 
+    "presets": [
+      {
+        "name": "Privacy Policy Page"
+      }
+    ]
+}
+{% endschema %}

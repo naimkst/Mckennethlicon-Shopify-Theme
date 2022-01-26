@@ -1,0 +1,164 @@
+<!-- text-page-area start here  -->
+<div class="text-page-area section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-xl-4">
+                <div class="text-page-left">
+                    <h2 class="title-two">{{ section.settings.contact_title }}</h2>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-xl-6">
+                <div class="primary-form">
+                    {% form 'contact', enctype: 'multipart/form-data' %}
+                    {% if form.posted_successfully? %} Thank you for your contact {% endif %}
+                    {{ form.errors | default_errors }}
+                        <div class="form-title">{{ section.settings.form_title }}</div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="firstName" name="contact[firstName]"
+                                        placeholder="Full Name" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="lastName" name="contact[lastName]"
+                                        placeholder="Last Name" />
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="contact[email]"
+                                        placeholder="Email" />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="contact[liquam]" value="Liquam bibendum" id="checkone" />
+                                        <label class="form-check-label" for="checkone">
+                                            Liquam bibendum
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="contact[quis]" value="Quis aliquet magna" id="checktwo" />
+                                        <label class="form-check-label" for="checktwo">
+                                            Quis aliquet magna
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="contact[vulputate]" type="checkbox" value="Vulputate ullamcorper" id="checkthree" />
+                                        <label class="form-check-label" for="checkthree">
+                                            Vulputate ullamcorper
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="contact[liquam1]" type="checkbox" value="Liquam bibendum" id="checkfour" />
+                                        <label class="form-check-label" for="checkfour">
+                                            Liquam bibendum
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="contact[liquam2]" type="checkbox" value="Quis aliquet magna" id="checkfive" />
+                                        <label class="form-check-label" for="checkfive">
+                                            Quis aliquet magna
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="contact[liquam3]" type="checkbox" value="Vulputate ullamcorper" id="checksix" />
+                                        <label class="form-check-label" for="checksix">
+                                            Vulputate ullamcorper
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <textarea class="form-control message-box" name="contact[message]" id="message" rows="3"
+                                        placeholder="Enter your message here"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="secondary-btn form-btn">submit</button>
+                            </div>
+                        </div>
+                    {%- endform -%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- text-page-area end here  -->
+<!-- recently-viewed area start here  -->
+<div class="recently-viewed section">
+    <div class="container">
+        <h2 class="section-inner-title text-dark">{{ section.settings.recent_view_title }}</h2>
+        <div class="row g-0">
+            {% assign limit = section.settings.feature_item_limit %}
+            {% for product in section.settings.feature_item_collection.products limit:limit %}
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="single-product">
+                        <div class="product-thumbnil">
+                            <a href="{{ product.url }}"><img src="{{ product.featured_image.src | img_url: '' }}" alt="item" /></a>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title"><a href="{{ product.url }}">Cream Earl Grey Reserve</a></h3>
+                            <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- recently-viewed area end here  -->
+
+{% schema %}
+{
+    "name": "Contact Us",
+    "settings":[
+        {
+            "type": "text",
+            "id": "contact_title",
+            "label": "Contact Us Title",
+            "default": "Contact Us"
+        },
+        {
+            "type": "text",
+            "id": "form_title",
+            "label": "Form Title",
+            "default": "FORM"
+        },
+        {
+            "type": "text",
+            "id": "recent_view_title",
+            "label": "Form Title",
+            "default": "RECENTLY VIEWED"
+        },
+        {
+            "type": "collection",
+            "id": "feature_item_collection",
+            "label": "Feature Collections"
+        },
+        {
+            "type": "range",
+            "id": "feature_item_limit",
+            "label": "Product Limit",
+            "min": 1,
+            "max": 40,
+            "default": 3
+        }
+    ],
+    "presets": [
+      {
+        "name": "Contact Us"
+      }
+    ]
+}
+{% endschema %}
