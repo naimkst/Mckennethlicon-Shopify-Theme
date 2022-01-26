@@ -1,4 +1,31 @@
 {
   "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo1.png",
+          "announce_bar": "Free In-Store Pick Up + Free Shipping in Canada on Orders Over $80",
+          "main_menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "address": "#101-2342 Hasting St E Vancouver BC V5L 1V5",
+          "phone": "+1 778 889 8327",
+          "email": "hello@steamteahouse.com",
+          "footer_menu": "",
+          "facebook": "https:\/\/facebook.com",
+          "instagram": "https:\/\/instagram.com",
+          "Privacy_Policy": "",
+          "Terms_Of_Use": "",
+          "copry_right": "© 2022 Steam Tea House Ltd."
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   }
 }
