@@ -26,10 +26,10 @@
                 </div>
             </div>
             <div class="col-lg-5">
-                <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+                <form action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
                     <div class="product-section-right">
                         <div class="product-title-area">
-                            <h2 class="product-title">Chamomile (Organic)</h2>
+                            <h2 class="product-title">{{ product.title }}</h2>
                             <img src="{{ 'product-icon.svg' | asset_url }}" alt="product icon" class="icon" />
                         </div>
                         <p class="product-short-descrption">{{ product.description }}</p>
@@ -58,12 +58,12 @@
                             <div class="qty-wrap">
                                 <div class="product-qty">
                                     <button class="dec qty-btn">-</button>
-                                    <input  min="1" class="qty-input" type="text" title="Quantity" name="quantity" value="1" readonly />
+                                    <input  min="1" class="qty-input" id="quantity" type="number" title="Quantity" name="quantity" value="1" readonly />
                                     <button class="inc qty-btn">+</button>
                                 </div>
                             </div>
-                            <input type="hidden" id="variant-id" name="id" value="{{ product.variants.first.id }}">
-                            <button type="submit" class="secondary-btn" >Add to cart</button>
+                            <input type="hidden" class="variant-idss" id="variant-id" name="id" value="{{ product.variants.first.id }}">
+                            <button type="submit" class="secondary-btn skipChart" >Add to cart</button>
                         </div>
                         <div class="product-content">
                             <div class="accordion primary-accordion" id="ProductContent">

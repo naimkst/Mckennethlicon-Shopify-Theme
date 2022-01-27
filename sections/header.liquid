@@ -25,48 +25,17 @@
                         <div class="search-form-area">
                             <div class="search-form">
                                 <form action="#">
-                                    <input type="text" name="search" placeholder="Search here" />
+                                    <input type="search" id="search-box" name="q" placeholder="Search here" autocomplete="off" />
                                 </form> 
                             </div>
                             <div class="search-item-list">
-                                <a href="#" class="single-search-item">
-                                    <div class="item-thumbnail">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg" alt="product image" />
-                                    </div>
-                                    <div class="item-info">
-                                        <h3>item name item name item name</h3>
-                                    </div>
-                                </a>
-                                <a href="#" class="single-search-item">
-                                    <div class="item-thumbnail">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg" alt="product image" />
-                                    </div>
-                                    <div class="item-info">
-                                        <h3>item name item name item name</h3>
-                                    </div>
-                                </a>
-                                <a href="#" class="single-search-item">
-                                    <div class="item-thumbnail">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg" alt="product image" />
-                                    </div>
-                                    <div class="item-info">
-                                        <h3>item name item name item name</h3>
-                                    </div>
-                                </a>
-                                <a href="#" class="single-search-item">
-                                    <div class="item-thumbnail">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg" alt="product image" />
-                                    </div>
-                                    <div class="item-info">
-                                        <h3>item name item name item name</h3>
-                                    </div>
-                                </a>
-                                <a href="#" class="load-more-btn">load more</a>
+                                
+                                <!-- <a href="#" class="load-more-btn">load more</a> -->
                             </div>
                         </div>
                     </li>
                     <li><a href="#"><img class="icon" src="{{ 'account.svg' | asset_url }}" alt="account" /></a></li>
-                    <li><a href="#" class="cart-btn"><img class="icon" src="{{ 'bag.svg' | asset_url }}" alt="bag" />
+                    <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart" class="cart-btn"><img class="icon" src="{{ 'bag.svg' | asset_url }}" alt="bag" />
                             <span class="cart-items-count">{{ cart.item_count }}</span></a></li>
                 </ul>
                 <button class="menu-bar d-block d-lg-none" type="button" data-bs-toggle="offcanvas"

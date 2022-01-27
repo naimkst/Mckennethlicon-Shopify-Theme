@@ -1,0 +1,34 @@
+
+<div class="offcanvas-body">
+    <div class="offcanvas-boty-top">
+        <div class="cart-item-list">
+            {% for item in cart.items %}
+                <div class="single-card-item">
+                    <div class="product-image">
+                        <img src="{{ item | img_url: '' }}" alt="item" />
+                    </div>
+                    <div class="product-info">
+                    <h4 class="product-name">{{ item.product.title }}</h4>
+                    <span class="product-quantity">{{ item.quantity }}</span>
+                    </div>
+                    <div class="product-qty">
+                        <button class="dec qty-btn">-</button>
+                        <input class="qty-input" type="text" title="Quantity" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" readonly />
+                        <button class="inc qty-btn">+</button>
+                    </div>
+                    <div class="product-price">
+                    <h4 class="price">{{ item.line_price | money }}</h4>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="sub-total-area">
+            <h4 class="subtotal-title">subtotal</h4>
+            <span class="subtotal-price">{{ cart.total_price | money }}</span>
+        </div>
+    </div>
+    <div class="offcanvas-boty-bottom">
+        <button href="#" type="submit" name="update" class="checkout-btn update updateSkipBtn">Update</button>
+        <button href="#" type="submit" name="checkout" class="checkout-btn">checkout</button>
+    </div>
+</div>
