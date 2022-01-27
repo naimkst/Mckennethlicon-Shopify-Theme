@@ -1,0 +1,69 @@
+<div class="offcanvas offcanvas-start filter-area" tabindex="-1" id="offcanvasFilter">
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvasExampleLabel">Filter by</h4>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                class="fas fa-times"></i></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <form class="filter-form">
+            {%- for filter in collections.filters -%}
+            <div class="single-filter">
+                <h4 class="filter-title">{{ filter.label }}</h4>
+                <div class="filter-list">
+
+                    {%- case filter.type -%}
+
+                    <!-- For Available Filter Types -->
+                    {%- when 'list' -%}
+                    {%- for filter_value in filter.values -%}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                            id="Filter-{{ filter.param_name }}-{{ forloop.index }}" name="{{ filter_value.param_name }}"
+                            value="{{ filter_value.value }}" {% if filter_value.active==true %} checked {% endif %} />
+                        <label class="form-check-label" for="Filter-{{ filter.param_name }}-{{ forloop.index }}"> {{
+                            filter_value.label }} {{ filter_value.active }}</label>
+                    </div>
+                    {%- endfor -%}
+
+                    <div class="filter-group-display__submit">
+                        <input type="submit" value="Apply">
+                    </div>
+
+                    <!-- For Price Range Filter Type -->
+                    {%- when 'price_range' -%}
+                    <div class="filter-group-display__price-range">
+                        <div class="filter-group-display__price-range-from">
+                            <span>{{ cart.currency.symbol }}</span>
+                            <input name="{{ filter.min_value.param_name }}"
+                                id="Filter-{{ filter.min_value.param_name }}" {% if filter.min_value.value -%}
+                                value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}" {%-
+                                endif %} type="number" placeholder="0" min="0"
+                                max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+                            <label for="Filter-{{ filter.min_value.param_name }}">From</label>
+                        </div>
+                        <div class="filter-group-display__price-range-to">
+                            <span>{{ cart.currency.symbol }}</span>
+                            <input name="{{ filter.max_value.param_name }}"
+                                id="Filter-{{ filter.max_value.param_name }}" {% if filter.max_value.value -%}
+                                value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}" {%-
+                                endif %} type="number"
+                                placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}" min="0"
+                                max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+
+                            <label for="Filter-{{ filter.max_value.param_name }}">To</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group-display__submit">
+                        <input type="submit" value="Apply">
+                    </div>
+                    {%- endcase -%}
+                </div>
+            </div>
+            {%- endfor -%}
+    </div>
+</div>
+
+</form>

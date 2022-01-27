@@ -1625,11 +1625,25 @@ scrollUp
 .filter-area .single-filter .form-check {
   margin-bottom: 1rem;
 }
-.filter-area .single-filter .form-check .form-check-label {
+.filter-area .single-filter .form-check .form-check-label, .active-filters__remove-filte {
   text-transform: capitalize;
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--bColor);
+  cursor: pointer;
+}
+a.active-filters__remove-filter, a.active-filters__clear.form-check-label {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #2b2a28;
+  cursor: pointer;
+}
+a.active-filters__clear.form-check-label {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #d34437;
   cursor: pointer;
 }
 .filter-area .single-filter .form-check .form-check-input {
@@ -2341,4 +2355,8 @@ p.price-single-page {
   font-size: 20px;
   margin-top: 15px !important;
   display: inline-block;
+}
+.disabled{
+  pointer-events: none;
+  opacity: 0.5;
 }

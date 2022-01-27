@@ -2,7 +2,7 @@
 <div class="shop-area">
     <div class="container">
         {% assign limit_product = section.settings.product_limit %}
-        {%- paginate collections.all.products by limit_product -%}
+        {%- paginate collections by limit_product -%}
         
         {% render 'product-filter' %}
         
@@ -26,7 +26,7 @@
             </div>
             <div class="shop-item-wrap">
                 <div class="row g-0">
-                    {% for product in collections.all.products %}
+                    {% for product in collections %}
                     <div class="col-lg-4 col-md-6">
                         <div class="single-product">
                             <div class="product-thumbnil">
@@ -74,7 +74,69 @@
         {%- endpaginate -%}
     </div>
 </div>
-{% render 'shop-filter' %}
+<div class="offcanvas offcanvas-start filter-area" tabindex="-1" id="offcanvasFilter">
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvasExampleLabel">Filter by</h4>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                class="fas fa-times"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="single-filter">
+            <h4 class="filter-title">Collection</h4>
+            <div class="filter-list">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Caffeinated" />
+                    <label class="form-check-label" for="Caffeinated"> Caffeinated</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Non-caffeinated" />
+                    <label class="form-check-label" for="Non-caffeinated"> Non-caffeinated</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Organic" checked />
+                    <label class="form-check-label" for="Organic"> Organic</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Non-organic" />
+                    <label class="form-check-label" for="Non-organic"> Non-organic</label>
+                </div>
+            </div>
+        </div>
+        <div class="single-filter">
+            <h4 class="filter-title">Tea Type</h4>
+            <div class="filter-list">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Black" />
+                    <label class="form-check-label" for="Black"> Black</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Dark" />
+                    <label class="form-check-label" for="Dark"> Dark</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Fruit-Herbal" checked />
+                    <label class="form-check-label" for="Fruit-Herbal"> Fruit/Herbal</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Honeybush" />
+                    <label class="form-check-label" for="Honeybush"> Rooibos/Honeybush</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Oolong" />
+                    <label class="form-check-label" for="Oolong"> Oolong</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="White" />
+                    <label class="form-check-label" for="White"> White</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Green" />
+                    <label class="form-check-label" for="Green"> Green</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- shop area end here  -->
 
 

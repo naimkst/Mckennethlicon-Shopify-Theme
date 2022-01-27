@@ -4,29 +4,22 @@
         {% assign limit_product = section.settings.product_limit %}
         {%- paginate collections.all.products by limit_product -%}
         
-        {% render 'product-filter' %}
-        
             <div class="shop-filter-are">
                 <div class="shop-filter-left">
                     <button class="filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
                         aria-controls="offcanvasFilter">Filter by <img class="filter-icon"
                             src="{{ 'filter.svg' | asset_url }}" alt="filter" /></button>
                 </div>
-                <div class="shop-filter-right">
-                    <div class="short-by">
-                        <span class="short-by-title">Sort by</span>
-                        <select class="form-select">
-                            <option selected>Best Selling</option>
-                            <option value="1">Best Price</option>
-                            <option value="2">Low Price</option>
-                            <option value="3">Best Review</option>
-                        </select>
-                    </div>
-                </div>
+
+                {% render 'short-filter' %}
             </div>
             <div class="shop-item-wrap">
                 <div class="row g-0">
-                    {% for product in collections.all.products %}
+
+                    {% assign data = '<p>okay</p>' %}
+
+                    {% assign products_by_price = collection.products %}
+                    {% for product in products_by_price %}
                     <div class="col-lg-4 col-md-6">
                         <div class="single-product">
                             <div class="product-thumbnil">
@@ -74,7 +67,9 @@
         {%- endpaginate -%}
     </div>
 </div>
-{% render 'shop-filter' %}
+
+{% render 'product-filter' %}
+
 <!-- shop area end here  -->
 
 

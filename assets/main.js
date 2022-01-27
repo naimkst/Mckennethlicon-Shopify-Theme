@@ -135,6 +135,7 @@
         // updateHistoryState(found)
         // $('#variant-id').val(found.id)
       });
+
   });
 
 })(jQuery);
