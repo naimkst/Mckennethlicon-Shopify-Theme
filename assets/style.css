@@ -2656,3 +2656,6 @@ button.checkout-btn.update {
     width: 100%;
   }
 }
+.single-product.recent-view .product-thumbnil img {
+  height: 170px;
+}
