@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "home-page",
+      "settings": {
+      }
+    },
+    "164337761358aad873": {
+      "type": "our-story-hero",
+      "settings": {
+        "story_title": "Our Story",
+        "story_slug": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis euismod ex, id rhoncus arcu. Ut vitae facilisis metus, nec auctor nibh."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164337761358aad873"
+  ]
+}
