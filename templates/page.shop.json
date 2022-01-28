@@ -1,15 +1,23 @@
 {
-    "sections": {
-      "main": {
-        "type": "showcase-area"
-      },
-      "shop": {
-        "type": "product-grid"
+  "sections": {
+    "main": {
+      "type": "showcase-area",
+      "settings": {
+        "showcase_hero_title": "Our Teas",
+        "showcase_hero_slug": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis euismod ex, id rhoncus arcu. Ut vitae facilisis metus, nec auctor nibh. Integer ut tristique magna, id congue ex. Sed mollis libero non velit faucibus, quis suscipit tortor gravida."
       }
     },
-    "order": [
-      "main",
-      "shop"
-    ]
-  }
-  
+    "shop": {
+      "type": "product-grid",
+      "settings": {
+        "showcase_hero_title": "Our Teas",
+        "showcase_hero_slug": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis euismod ex, id rhoncus arcu. Ut vitae facilisis metus, nec auctor nibh. Integer ut tristique magna, id congue ex. Sed mollis libero non velit faucibus, quis suscipit tortor gravida.",
+        "product_limit": 6
+      }
+    }
+  },
+  "order": [
+    "main",
+    "shop"
+  ]
+}
