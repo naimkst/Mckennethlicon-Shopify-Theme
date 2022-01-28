@@ -31,7 +31,7 @@
       "settings": {
         "feature_title": "FEATURED ITEMS",
         "feature_item_collection": "feature-item-1",
-        "feature_item_link": "shopify:\/\/collections\/all",
+        "feature_item_link": "\/collections\/all",
         "about_feature_item_limit": 4
       }
     }
