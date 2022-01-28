@@ -103,7 +103,7 @@
             {% assign limit = section.settings.feature_item_limit %}
             {% for product in section.settings.feature_item_collection.products limit:limit %}
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
-                    <div class="single-product">
+                    <div class="single-product recent-view">
                         <div class="product-thumbnil">
                             <a href="{{ product.url }}"><img src="{{ product.featured_image.src | img_url: '' }}" alt="item" /></a>
                         </div>
