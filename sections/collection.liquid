@@ -71,39 +71,3 @@
 {% render 'product-filter' %}
 
 <!-- shop area end here  -->
-
-
-{% schema %}
-{
-    "name": "Products Grid",
-    "settings":[
-        
-        {
-            "type": "text",
-            "id": "showcase_hero_title",
-            "label": "Showcase Hero Title",
-            "default": "Our Teas"
-        },
-        {
-            "type": "text",
-            "id": "showcase_hero_slug",
-            "label": "Showcase Hero Description",
-            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis euismod ex, id rhoncus arcu. Ut vitae facilisis metus, nec auctor nibh. Integer ut tristique magna, id congue ex. Sed mollis libero non velit faucibus, quis suscipit tortor gravida."
-        },
-        {
-            "type": "range",
-            "id": "product_limit",
-            "label": "Product limit Per Page",
-            "default": 9,
-            "min": 1,
-            "max": 50
-        }
-        
-    ],
-    "presets": [
-      {
-        "name": "Products Grid"
-      }
-    ]
-}
-{% endschema %}
