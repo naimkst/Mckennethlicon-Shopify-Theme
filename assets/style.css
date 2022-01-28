@@ -1367,7 +1367,7 @@ scrollUp
   }
 
   .showcase-area {
-    padding: 200px 0;
+    padding: 200px 0 100px 0;
   }
 }
 @media (max-width: 991px) {
@@ -2297,7 +2297,7 @@ a.active-filters__clear.form-check-label {
   width: 350px;
   height: 50px;
   padding: 10px 15px;
-  font-family: $bodyFont;
+  font-family: "Greycliff CF";
   font-size: 16px;
   font-weight: 400;
   color:var(--primary-color);
@@ -2410,6 +2410,7 @@ p.price-single-page {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+          align-items: center;
   padding: 1.5rem 0;
   border-bottom: 1px solid #C8C1BA;
 }
@@ -2418,6 +2419,7 @@ p.price-single-page {
   border: 1px solid #C8C1BA;
   width: 6rem;
   height: 6rem;
+  margin-right: .8rem;
 }
 .offcanvas-cart .cart-item-list .single-card-item .product-image img {
   width: 100%;
@@ -2425,9 +2427,12 @@ p.price-single-page {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.offcanvas-cart .cart-item-list .single-card-item .product-info {
+  width: 35%
+}
 .offcanvas-cart .cart-item-list .single-card-item .product-qty {
   height: 4rem;
-  width: 8rem;
+  width: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2473,7 +2478,11 @@ p.price-single-page {
   font-weight: 500;
   color: var(--bColor);
 }
+.offcanvas-cart .cart-item-list .single-card-item .product-price {
+  margin: 0 .8rem;
+}
 .offcanvas-cart .cart-item-list .single-card-item .product-price .price {
+  margin: 0;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--bColor);
@@ -2489,6 +2498,16 @@ p.price-single-page {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 0;
+}
+.offcanvas-cart .cart-item-list .single-card-item .close-item {
+  padding: 0;
+  border: none;
+  background: transparent !important;
+  font-size: 1.4rem;
+  transition: all .3s;
+}
+.offcanvas-cart .cart-item-list .single-card-item .close-item:hover {
+  color:#dc3545;
 }
 .offcanvas-cart .sub-total-area .subtotal-title {
   margin: 0;
@@ -2513,7 +2532,9 @@ p.price-single-page {
   font-weight: 600;
   text-transform: capitalize;
   color: var(--white);
+  border: none;
 }
+
 
 @media (max-width: 360px) {
   .offcanvas-cart {
@@ -2620,4 +2641,18 @@ button.checkout-btn.update {
   margin-bottom: 10px;
   border: none;
   background: #3F65BC;
+}
+@media (max-width:480px) {
+  .search-form-area {
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+  .search-form-area .search-form input {
+    width: 100%;
+  }
+  .search-form-area .search-item-list {
+    width: 100%;
+  }
 }

@@ -9,7 +9,6 @@
                     </div>
                     <div class="product-info">
                     <h4 class="product-name">{{ item.product.title }}</h4>
-                    <span class="product-quantity">{{ item.quantity }}</span>
                     </div>
                     <div class="product-qty">
                         <button class="dec qty-btn">-</button>
@@ -19,16 +18,21 @@
                     <div class="product-price">
                     <h4 class="price">{{ item.line_price | money }}</h4>
                     </div>
+                    <button id="remove{{ forloop.index }}" data-id="{{ forloop.index }}" class="close-item"><i class="fas fa-times"></i></button>
                 </div>
             {% endfor %}
         </div>
+        {% if cart.total_price > 0 %}
         <div class="sub-total-area">
             <h4 class="subtotal-title">subtotal</h4>
             <span class="subtotal-price">{{ cart.total_price | money }}</span>
         </div>
+        {% endif %}
     </div>
-    <div class="offcanvas-boty-bottom">
-        <button href="#" type="submit" name="update" class="checkout-btn update updateSkipBtn">Update</button>
-        <button href="#" type="submit" name="checkout" class="checkout-btn">checkout</button>
-    </div>
+    {% if cart.total_price > 0 %}
+        <div class="offcanvas-boty-bottom">
+            <button href="#" type="submit" name="update" class="checkout-btn update updateSkipBtn">Update</button>
+            <button href="#" type="submit" name="checkout" class="checkout-btn">checkout</button>
+        </div>
+    {% endif %}
 </div>

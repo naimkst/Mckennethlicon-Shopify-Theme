@@ -152,10 +152,10 @@
           var current_url = window.location.href;
           console.log(current_url);
           window.location.href = current_url;
-          $('div#offcanvasCart').toggleClass('show');
-          $('div#offcanvasCart').css({
-            'visibility': 'visible'
-          });
+          // $('div#offcanvasCart').toggleClass('show');
+          // $('div#offcanvasCart').css({
+          //   'visibility': 'visible'
+          // });
         }
       });
     });
@@ -174,76 +174,98 @@
           console.log(data, current_url);
           document.location.href = current_url;
           $('div#offcanvasCart').toggleClass('show');
-          $('div#offcanvasCart').css({
-            'visibility': 'visible'
-          });
+          // $('div#offcanvasCart').css({
+          //   'visibility': 'visible'
+          // });
         }
       });
     });
 
   });
 
-  $('.btn-close').on('click', function () {
-    $('div#offcanvasCart').toggleClass('show');
-    $('div#offcanvasCart').css({
-      'visibility': 'hidden'
-    });
-  });
-
-  //Ajax Search for Search Bar
-
-  //Ajax Search Result
-  $(document).ready(function () {
-    $("#search-box").keyup(function () {
-      console.log('iiin')
-      const search_result = $('.search-item-list');
-      const query = document.querySelector('input').value;
-      const searchSection = $('.search-section');
-      var ajax_spiner = $('.search-loading');
-
-      if (query != '') {
-        $.ajax(
-          {
-            url: '/search/suggest.json?q=' + query + '&resources[type]=product',
-            type: 'GET',
-            dataType: 'json',
-            beforeSend: function () {
-              ajax_spiner.show();
-            }
-          }
-        ).done(function (data) {
-          if (data.resources.results.products != null) {
-            search_result.hide();
-            $(search_result).empty();
-            data.resources.results.products.forEach(function (product) {
-              console.log(product)
-              search_result.show();
-              var html = '<a href="'+product.url+'" class="single-search-item">';
-              html += '<div class="item-thumbnail">';
-              html += '<img src="' + product['image'] + '" alt="" width="80px" alt="product image">';
-              html += '</div>';
-              html += '<div class="item-info">';
-              html += '<h3>'+product.title+'</h3>';
-              html += '</div>';
-              html += '</a>';
-              ajax_spiner.hide();
-              $(search_result).append(html);
-            });
-          } else {
-            search_result.hide();
-            $(search_result).empty();
-            $(search_result).append("<li>No Data Found</li>");
-          }
-        });
-      } else {
-        search_result.hide();
-        $(search_result).empty();
-        $(search_result).append("<li>No Data Found</li>");
+  //Remove Product
+  $('.close-item').on('click', function (e) {
+    var form = $('#cartUpdate');
+    var User_id = $(this).attr('data-id');
+    console.log(User_id);
+    e.preventDefault()
+    $.ajax({
+      type: 'POST',
+      url: "/cart/change",
+      dataType: 'json',
+      data: {
+        "line": User_id,
+        "quantity": 0
+      },
+      success: function (data) {
+        var current_url = window.location.href;
+        document.location.href = current_url;
+        
       }
-      $(search_result).empty();
     });
-
   });
 
+// $('.btn-close').on('click', function () {
+//   $('div#offcanvasCart').toggleClass('show');
+//   $('div#offcanvasCart').css({
+//     'visibility': 'hidden'
+//   });
+// });
 
-})(jQuery);
+//Ajax Search for Search Bar
+
+//Ajax Search Result
+$(document).ready(function () {
+  $("#search-box").keyup(function () {
+    console.log('iiin')
+    const search_result = $('.search-item-list');
+    const query = document.querySelector('input').value;
+    const searchSection = $('.search-section');
+    var ajax_spiner = $('.search-loading');
+
+    if (query != '') {
+      $.ajax(
+        {
+          url: '/search/suggest.json?q=' + query + '&resources[type]=product',
+          type: 'GET',
+          dataType: 'json',
+          beforeSend: function () {
+            ajax_spiner.show();
+          }
+        }
+      ).done(function (data) {
+        if (data.resources.results.products != null) {
+          search_result.hide();
+          $(search_result).empty();
+          data.resources.results.products.forEach(function (product) {
+            console.log(product)
+            search_result.show();
+            var html = '<a href="' + product.url + '" class="single-search-item">';
+            html += '<div class="item-thumbnail">';
+            html += '<img src="' + product['image'] + '" alt="" width="80px" alt="product image">';
+            html += '</div>';
+            html += '<div class="item-info">';
+            html += '<h3>' + product.title + '</h3>';
+            html += '</div>';
+            html += '</a>';
+            ajax_spiner.hide();
+            $(search_result).append(html);
+          });
+        } else {
+          search_result.hide();
+          $(search_result).empty();
+          $(search_result).append("<li>No Data Found</li>");
+        }
+      });
+    } else {
+      search_result.hide();
+      $(search_result).empty();
+      $(search_result).append("<li>No Data Found</li>");
+    }
+    $(search_result).empty();
+  });
+
+});
+
+
+}) (jQuery);
