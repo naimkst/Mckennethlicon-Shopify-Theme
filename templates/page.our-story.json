@@ -11,10 +11,36 @@
         "story_title": "Our Story",
         "story_slug": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis euismod ex, id rhoncus arcu. Ut vitae facilisis metus, nec auctor nibh."
       }
+    },
+    "16433781454719e4a7": {
+      "type": "about-area",
+      "settings": {
+        "about_title": "Lorem Ipsum",
+        "about_slug": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+      }
+    },
+    "16433781480421ab50": {
+      "type": "about-product-servie",
+      "settings": {
+        "product_service_title": "Lorem Ipsum",
+        "product_service_slug": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+      }
+    },
+    "164337815567ac48d5": {
+      "type": "about-feature",
+      "settings": {
+        "feature_title": "FEATURED ITEMS",
+        "feature_item_collection": "feature-item-1",
+        "feature_item_link": "\/collections\/all",
+        "about_feature_item_limit": 4
+      }
     }
   },
   "order": [
     "main",
-    "164337761358aad873"
+    "164337761358aad873",
+    "16433781454719e4a7",
+    "16433781480421ab50",
+    "164337815567ac48d5"
   ]
 }

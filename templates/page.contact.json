@@ -1,7 +1,14 @@
 {
   "sections": {
     "main": {
-      "type": "contact-us"
+      "type": "contact-us",
+      "settings": {
+        "contact_title": "Contact Us",
+        "form_title": "FORM",
+        "recent_view_title": "RECENTLY VIEWED",
+        "feature_item_collection": "feature-item-1",
+        "feature_item_limit": 5
+      }
     }
   },
   "order": [
