@@ -2659,3 +2659,6 @@ button.checkout-btn.update {
 .single-product.recent-view .product-thumbnil img {
   height: 170px;
 }
+.single-product.feature-products .product-thumbnil img {
+  height: 280px;
+}
