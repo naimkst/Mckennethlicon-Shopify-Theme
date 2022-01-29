@@ -20,6 +20,7 @@
     "our-story": {
       "type": "our-story",
       "settings": {
+        "story_background_image": "shopify:\/\/shop_images\/story-bg.jpg",
         "story_title": "Our Story",
         "story_slug": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
         "story_button_url": ""
