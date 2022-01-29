@@ -3,6 +3,10 @@
     "home": {
       "type": "hero-banner",
       "settings": {
+        "hero_background_image": "shopify:\/\/shop_images\/banner-bg.png",
+        "hero_title": "Lorem ipsum dolor sit amet.",
+        "hero_slug": "<p>Learn more about the rodents that may be infesting your home, buildings, yard and fields and how to control them in the safest and most efficient way.<\/p>",
+        "hero_button_url": ""
       }
     },
     "feature-item": {
