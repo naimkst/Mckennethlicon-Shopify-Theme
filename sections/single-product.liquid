@@ -26,11 +26,16 @@
                 </div>
             </div>
             <div class="col-lg-5">
+                {% assign product_collection = product.collections.first %}
                 <form action="/cart/add" method="post" enctype="multipart/form-data" id="addToCart">
                     <div class="product-section-right">
                         <div class="product-title-area">
                             <h2 class="product-title">{{ product.title }}</h2>
-                            <img src="{{ 'product-icon.svg' | asset_url }}" alt="product icon" class="icon" />
+                            {% if product_collection %}
+                            <img class="icon" src="{{ product_collection.featured_image.src | img_url: '' }}" alt="icon" />
+                            {% else %}
+                            <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
+                            {% endif %}
                         </div>
                         <p class="product-short-descrption">{{ product.description }}</p>
                         
@@ -94,3 +99,37 @@
 </div>
 <!-- single product area end here  -->
 
+    <!-- recently-viewed area start here  -->
+    <div class="recently-viewed section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-inner-title text-dark">{{ section.settings.recent_view_product_title }}</h2>
+                </div>
+            </div>
+            {% render 'recently-viewed' %}
+            
+        </div>
+    </div>
+    <!-- recently-viewed area end here  -->
+
+
+
+{% schema %}
+{
+    "name": "Single Product",
+    "settings":[
+        {
+            "type": "text",
+            "id": "recent_view_product_title",
+            "label": "Single View Title",
+            "default": "RECENTLY VIEWED"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Single Product"
+      }
+    ]
+}
+{% endschema %}

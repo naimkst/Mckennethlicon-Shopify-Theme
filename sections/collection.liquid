@@ -16,10 +16,12 @@
             <div class="shop-item-wrap">
                 <div class="row g-0">
 
-                    {% assign data = '<p>okay</p>' %}
-
                     {% assign products_by_price = collection.products %}
+                    {% assign collection = collection %}
+
                     {% for product in products_by_price %}
+                    {% assign product_collection = product.collections.first %}
+
                     <div class="col-lg-4 col-md-6">
                         <div class="single-product">
                             <div class="product-thumbnil">
@@ -28,7 +30,14 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+
+                                {% assign product_collection = product.collections.first %}
+                                {% if product_collection %}
+                                <img class="icon" src="{{ product_collection.featured_image.src | img_url: '' }}" alt="icon" />
+                                {% else %}
                                 <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
+                                {% endif %}
+                                
                             </div>
                         </div>
                     </div>

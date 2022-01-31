@@ -1,0 +1,26 @@
+{{ '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' | script_tag }}
+{{ 'jquery.products.min.js' | asset_url | script_tag }}
+
+
+{% assign grid_item_width = 'small--one-half medium-up--one-quarter' %}
+    {% raw %}
+    <div class="row g-0" id="recently-viewed-products">
+        <script  id="recently-viewed-product-template" type="text/x-jquery-tmpl">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="single-product feature-products-item">
+                    <div class="product-thumbnil">
+                        <a href="${url}"><img src="${Shopify.Products.resizeImage(featured_image, "medium")}" alt="item" /></a>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title"><a href="${url}">${title}</a></h3>
+                        <!-- <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" /> -->
+                    </div>
+                </div>
+            </div>
+        </script>
+    </div>
+    {% endraw %}
+
+    <script>
+        Shopify.Products.showRecentlyViewed({ howManyToShow: 6 });
+    </script>
