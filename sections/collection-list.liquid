@@ -4,26 +4,6 @@
         {% assign limit_product = section.settings.product_limit %}
         {%- paginate collections by limit_product -%}
         
-        {% render 'product-filter' %}
-        
-            <div class="shop-filter-are">
-                <div class="shop-filter-left">
-                    <button class="filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
-                        aria-controls="offcanvasFilter">Filter by <img class="filter-icon"
-                            src="{{ 'filter.svg' | asset_url }}" alt="filter" /></button>
-                </div>
-                <div class="shop-filter-right">
-                    <div class="short-by">
-                        <span class="short-by-title">Sort by</span>
-                        <select class="form-select">
-                            <option selected>Best Selling</option>
-                            <option value="1">Best Price</option>
-                            <option value="2">Low Price</option>
-                            <option value="3">Best Review</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
             <div class="shop-item-wrap">
                 <div class="row g-0">
                     {% for product in collections %}
@@ -35,7 +15,7 @@
                             </div>
                             <div class="product-info">
                                 <h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
-                                <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
+                                <img class="icon" src="{{ product.featured_image.src | img_url: '' }}" alt="icon" />
                             </div>
                         </div>
                     </div>

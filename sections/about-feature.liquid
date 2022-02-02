@@ -12,7 +12,12 @@
                         </div>
                         <div class="product-info">
                             <h3 class="product-title"><a href="{{ product.url }}">Cream Earl Grey</a></h3>
+                            {% assign product_collection = product.collections.first %}
+                            {% if product_collection %}
+                            <img class="icon" src="{{ product_collection.featured_image.src | img_url: '' }}" alt="icon" />
+                            {% else %}
                             <img class="icon" src="{{ 'product-icon.svg' | asset_url }}" alt="icon" />
+                            {% endif %}
                         </div>
                     </div>
                 </div>

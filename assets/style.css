@@ -1827,6 +1827,7 @@ a.active-filters__clear.form-check-label {
 .recently-viewed .single-product .product-info .product-title {
   font-size: 1.6rem;
   line-height: 1.8rem;
+  min-height: 35px;
 }
 
 @media (max-width: 1399px) {
@@ -2271,7 +2272,7 @@ a.active-filters__clear.form-check-label {
 }
 @media (max-width: 991px) {
   .text-page-area {
-    padding-top: 160px;
+    padding-top: 190px;
   }
   .text-page-area, .single-product-section.section {
     padding-top: 195px;
@@ -2643,6 +2644,9 @@ button.checkout-btn.update {
   margin-bottom: 10px;
   border: none;
   background: #3F65BC;
+}
+.single-product.feature-products-item .product-thumbnil img {
+  height: 160px;
 }
 @media (max-width:480px) {
   .search-form-area {

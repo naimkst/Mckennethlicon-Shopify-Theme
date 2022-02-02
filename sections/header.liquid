@@ -1,34 +1,4 @@
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="canonical" href="{{ canonical_url }}">
-    <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
-    </title>
-    <meta name="description" content="SteamTea Responsive  HTML5 Template " />
-    <meta name="keywords" content="business,corporate, creative, woocommerach, design, gallery, minimal, modern, landing page, cv, designer, freelancer, html, one page, personal, portfolio, programmer, responsive, nft, p2p, vcard, one page" />
-    <meta name="author" content="SteamTea" />
-    <!-- Place favicon.ico in the root directory -->
-    {% if section.settings.favicon %}
-    <link rel="shortcut icon" href="{{ section.settings.favicon | img_url: '' }}" type="image/x-icon">
-    {% else %}
-    <link rel="shortcut icon" href="{{ 'favicon.png' | asset_url }}" type="image/x-icon">
-    {% endif %}
 
-    <!-- fonts file -->
-    <link href="{{ 'fonts.css' | asset_url}}" rel="stylesheet"/>
-    <!-- css file  -->
-    <link rel="stylesheet" href="{{ 'plugins.css' | asset_url }}" />
-    <link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}" />
-    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" />
-    <link rel="stylesheet" href="{{ 'responsive.css' | asset_url }}" />
-    <script src="{{ 'modernizr-3.11.2.min.js' | asset_url }}"></script>
-    {{ content_for_header }}
-</head>
 <body>
 <div class="preloader">
     <img src="{{ section.settings.logo | img_url: '' }}" alt="logo" />
@@ -69,7 +39,7 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="#"><img class="icon" src="{{ 'account.svg' | asset_url }}" alt="account" /></a></li>
+                    <!-- <li><a href="#"><img class="icon" src="{{ 'account.svg' | asset_url }}" alt="account" /></a></li> -->
                     <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart" class="cart-btn"><img class="icon" src="{{ 'bag.svg' | asset_url }}" alt="bag" />
                             <span class="cart-items-count">{{ cart.item_count }}</span></a></li>
                 </ul>
