@@ -3,7 +3,6 @@
     "home": {
       "type": "hero-banner",
       "settings": {
-        "hero_background_image": "shopify:\/\/shop_images\/banner-bg.png",
         "hero_title": "Lorem ipsum dolor sit amet.",
         "hero_slug": "<p>Learn more about the rodents that may be infesting your home, buildings, yard and fields and how to control them in the safest and most efficient way.<\/p>",
         "hero_button_url": ""
@@ -13,14 +12,13 @@
       "type": "feature-item",
       "settings": {
         "feature_title": "FEATURED ITEMS",
-        "feature_item_collection": "feature-item",
+        "feature_item_collection": "caffeinated",
         "feature_item_limit": 3
       }
     },
     "our-story": {
       "type": "our-story",
       "settings": {
-        "story_background_image": "shopify:\/\/shop_images\/story-bg.jpg",
         "story_title": "Our Story",
         "story_slug": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
         "story_button_url": ""
