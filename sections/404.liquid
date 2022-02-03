@@ -1,1 +1,62 @@
-<h1>Page Not Found!</h1>
+
+<!-- hero banenr area start here  -->
+<div class="hero-banner">
+    {% if section.settings.no_hero_background_image %}
+        <style>
+            .hero-banner {
+                position: relative;
+                padding: 350px 0;
+                background: url({{ section.settings.no_hero_background_image | img_url: '' }});
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                z-index: 1;
+            }
+        </style>
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="baner-title">{{ section.settings.no_hero_title }}</h2>
+                {{ section.settings.no_hero_slug }}
+                <a href="{{ section.settings.no_hero_button_url }}" class="secondary-btn">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- hero banenr area end here  -->
+
+{% schema %}
+{
+    "name": "404 Page",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "no_hero_background_image",
+            "label": "404 Background Image"
+        },
+        {
+            "type": "text",
+            "id": "no_hero_title",
+            "label": "404 Title",
+            "default": "Opppsss!"
+        },
+        {
+            "type": "richtext",
+            "id": "no_hero_slug",
+            "label": "404 Slug",
+            "default": "<p>Not found!</p>"
+        },
+        {
+            "type": "url",
+            "id": "no_hero_button_url",
+            "label": "404 Button Link"
+        }
+    ],
+    "presets": [
+      {
+        "name": "404"
+      }
+    ]
+}
+{% endschema %}

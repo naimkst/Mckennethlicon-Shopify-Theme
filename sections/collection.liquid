@@ -3,14 +3,12 @@
     <div class="container">
         {% assign limit_product = section.settings.product_limit %}
         {%- paginate collections.all.products by limit_product -%}
-        
             <div class="shop-filter-are">
                 <div class="shop-filter-left">
                     <button class="filter-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
                         aria-controls="offcanvasFilter">Filter by <img class="filter-icon"
                             src="{{ 'filter.svg' | asset_url }}" alt="filter" /></button>
                 </div>
-
                 {% render 'short-filter' %}
             </div>
             <div class="shop-item-wrap">
@@ -21,7 +19,6 @@
 
                     {% for product in products_by_price %}
                     {% assign product_collection = product.collections.first %}
-
                     <div class="col-lg-4 col-md-6">
                         <div class="single-product">
                             <div class="product-thumbnil">
