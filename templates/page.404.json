@@ -4,9 +4,18 @@
       "type": "home-page",
       "settings": {
       }
+    },
+    "16438791913740d06e": {
+      "type": "hero-banner",
+      "settings": {
+        "hero_title": "Uppss!!",
+        "hero_slug": "<p>Sorry page not found<\/p>",
+        "hero_button_url": "#"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16438791913740d06e"
   ]
 }
