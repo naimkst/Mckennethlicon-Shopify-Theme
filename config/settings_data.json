@@ -5,6 +5,7 @@
         "type": "header",
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo1.png",
+          "favicon": "shopify:\/\/shop_images\/logo1.png",
           "announce_bar": "Free In-Store Pick Up + Free Shipping in Canada on Orders Over $80",
           "main_menu": "main-menu"
         }
